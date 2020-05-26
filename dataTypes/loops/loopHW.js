@@ -6,14 +6,22 @@
 //          - Hi!
 //          - Hi!
 
-// We are creating a loop. First we are declaring a variable which is called 'i'. 
-// Then we are setting the maximum value of 'i' which is 0.
-//  Then we are saying what we'd like 'i' to increase by.
+// The variable "let i = 0" means the variable is starting at the 0 index
+
+//** For Loop Comment **
+// The word LET replaces (var) i equals 0; which is less than 5;  
+// The i++ indicates an addition of one iteration of the word "Hi". Anything in {} indicate its own scope.
+// For example the word 'Hi' was Looped (repeated) 5 times. 
+// The value of i is mutable, meaning that the index can be changed to give a different outcome.
+
+// ** For Loop Comment **
+// We are creating a loop. First We are declaring a variable called i. 
+// Then we are setting the maximum value of i.
+// Then we are saying what we'd like i to increase by. 
+
 for (let i = 0; i < 5; i++) {
-// Run Console.log for our output in the terminal we will get 'Hi!' 5 times because the statement 5 
-// is greater than 0 is a true statement 
-console.log('Hi!');
-// } Defines the end of the function    
+    // console.log prints what is inside its parantesis to the terminal/cli/bash/zsh
+    console.log('Hi!');
 }
 
 // Q2: Create a loop which tells us what loop number it is on
@@ -23,11 +31,10 @@ console.log('Hi!');
 //          - Loop Count: 3
 //          - Etc.. based on the max value parameter
 
-// Declare a loop with a variable 'j' that equals to index of 0, 10 is greater than 'j' which is 0
+// ** For Loop Comment **
 for (let j = 0; j < 10; j++) {
-// I then added interpolation so the loop tells us what number loop count it is on in the terminal
-    console.log(`Loop Count: ${j + 1}`);
-// } Defines end of function        
+    // add 1 to j and print it to the cli
+    console.log(j + 1);    
 }
 
 
@@ -38,17 +45,15 @@ for (let j = 0; j < 10; j++) {
 //          -   Hermies
 //          -   Poseidon
 
-// declare a variable called greekGods. Set the variable greekGods equal to an Array filled with 4 
-// strings which are, 'Zeus', 'Hades', 'Hermies', 'Poseidon'.
+// declare a variable called greekGods. Set the variable greekGods equal to an Array filled with 4 strings which are, 'Zeus', 'Hades', 'Hermies', 'Poseidon'.
 var greekGods = ['Zeus', 'Hades', 'Hermies', 'Poseidon'];
-// declare a loop with a variable 'k' that equals to index of 0, our variable 'greekgods' length is
-// greater than our variable 'k' 
+// iterate through the greekGods array, one value at a time
 for(var k = 0; k < greekGods.length; k++){
-// I then created an Array Using [k] that give us a value at index 0
+    // declare a variable called currentGod
+    // set that variable equal to the value at the current index
     var currentGod = greekGods[k];
-// output will give me the variable which i turned into an Array
+    // print our current value to the CLI
     console.log(currentGod);
-// End of function
 }
 
 
@@ -131,26 +136,34 @@ for(var k = 0; k < greekGods.length; k++){
     //     fruitNoVowels.push(currentFruit);
     // }
 
-// Final Solution
-   // declare a variable called fruit. Set the variable fruit equal to an Array filled with 5
-   // strings which are, 'Apple', 'Banana', 'Orange', 'Peach', 'Strawberry', 'Plum'
+    // Final Solution
+    // Declare a variable called fruit. Set it equal to an array of strings. 
     var fruit = ['Apple', 'Banana', 'Orange', 'Peach', 'Strawberry', 'Plum'];
-   // Set variable to an Array using []
+
+    // Declare a variable which will be our edited array. This variable starts as an empty array.
     var fruitNoVowels = [];
-   // Declare a loop with a variable 'i' that equals to index of 0, fruit.length is greater than 'i' which is 0
+
+    // Iterate over the fruit array. Starting at the first index and going until the last. 
     for(var i = 0; i < fruit.length; i++){
-   // 
+        // create a variable that is equal to the lowercase version of the current fruit
         var currentFruit = fruit[i].toLowerCase();
+        // create a variable, which is an array, that holds all of the vowel values
         var vowels = ['a','e','i','o','u'];
+        // iterate through the vowel array
         for (var index = 0; index < vowels.length; index++) {
+            // create a variable that is equal to the current vowel
             const currentVowel = vowels[index];
-            if(currentFruit.indexOf( currentVowel ) > 0){
+            // if our current fruit has a vowel in it execute what's inside the curly brackets
+            if(currentFruit.indexOf( currentVowel ) > -1){
+                //set current fruit to currentfruit minus the vowels by using the split and join methods.
                 currentFruit = currentFruit.split(currentVowel).join('');
             }
         }
+        // insert our current fruit into our new array which was declared prior to the loop (fruitNoVowels) 
         fruitNoVowels.push(currentFruit);
     }
-    console.log(fruitNoVowels);
+    // print our new, filled in, array to the CLI
+    console.log("Q4:" , fruitNoVowels);
     
 // Q5: Very Hard:
     //Optional 
@@ -168,6 +181,7 @@ for(var k = 0; k < greekGods.length; k++){
             const currentVowel = vowels[index];
             // NEXT LINE IS THE DIFFERENCE FOR THE TWO PROBLEMS
             // Start changing vowels after the first letter, 0, not at -1
+            // if our current fruit has a vowel after the first letter execute what's inside the curly brackets
             if(currentFruit.indexOf( currentVowel ) > 0){
                 currentFruit = currentFruit.split(currentVowel).join('');
             }

@@ -176,10 +176,9 @@
         // console.log(arr3)
 
 // SECTION 4: (Modular)
-
- // if(10 % 3 > 3){ // 1 > 3
+        
+    // if(10 % 3 > 3){ // 1 > 3
     //     console.log('condition 1 met')
     // } else {
     //     console.log('no conditions met');
     // }
-    
