@@ -108,3 +108,62 @@
 //    console.log(boolToWord(false));
 
 
+// Convert a Number to a String!
+// function numberToString(num) {
+//    return num.toString(); // The toString() method converts a number to a string.
+//   }
+// console.log(numberToString(25));
+
+// // Convert a string to a Number!
+// let stringToNumber = function(str){
+//     return parseInt(str);// The parseInt() function parses a string and returns an integer.
+    
+//   }
+//   console.log(stringToNumber("1234"));
+//   console.log(stringToNumber("605"));
+//   console.log(stringToNumber("1405"));
+//   console.log(stringToNumber("-7"));
+
+// //   even or odd  // 
+//   function evenOrOdd(number) {
+//     if ( number % 2 === 0) {
+//         return "Even";
+//     }else {
+//         return "Odd";
+//     }
+//   }
+//   console.log(evenOrOdd(2));
+//   console.log(evenOrOdd(0));
+//   console.log(evenOrOdd(7));
+//   console.log(evenOrOdd(1));
+
+// //   Convert Number to Reversed Array of Strings  //
+//   function digitize(n) {
+//     let initialArray = (""+n).split('');
+//     let reversedArray = [];
+//     for (var i = initialArray.length - 1; i >= 0; i--) {
+//       reversedArray[i] = parseInt(initialArray.shift(),10);
+//     }
+//     return reversedArray;
+//   }
+  
+//   console.log(digitize(348597));
+
+//   Sorting Through an Array  //
+function sorted(arr) {
+ 
+    let newArray = arr;
+    
+    for(let j = 0; j < arr.length; j++){
+    for (let i = 0; i < newArray.length; i++) {
+    let currentNum = newArray[i];
+    if(currentNum > newArray[i + 1]){
+    newArray.splice(i, 1); 
+    newArray.splice(i + 1, 0, currentNum); 
+    }
+    }
+    } 
+    return newArray;
+   }
+    
+   console.log(sorted([0, 5, 1, 3, 2, 9, 7, 6, 4]));
